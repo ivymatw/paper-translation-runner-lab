@@ -1,0 +1,21 @@
+# Generated artifacts
+pdf2zh-*
+*.pdf
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# Local caches
+.cache/
+
+# Nested git metadata if copied accidentally
+**/.git/
+
+# OS / editor noise
+*.swp
+*.swo

@@ -1,0 +1,300 @@
+{
+  "runner": "run_pdf2zh_by_page.py",
+  "version": 1,
+  "started_at": "2026-04-14T02:39:39.486786+00:00",
+  "source_pdf": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/papers/2511.23174_Safety_Agents_or_Propaganda_Engine.pdf",
+  "output_root": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp",
+  "page_count": 15,
+  "config": {
+    "service": "openai",
+    "lang_in": "en",
+    "lang_out": "zh-TW",
+    "thread": 1,
+    "openai_base_url": "http://127.0.0.1:8091/v1",
+    "openai_model": "minimax-2.7"
+  },
+  "pages": {
+    "1": {
+      "page": 1,
+      "status": "degraded_pass",
+      "started_at": "2026-04-14T02:39:39.487110+00:00",
+      "finished_at": "2026-04-14T02:40:08.833715+00:00",
+      "duration_seconds": 29.347,
+      "exit_code": 0,
+      "mono_exists": true,
+      "dual_exists": true,
+      "mono_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-01/2511.23174_Safety_Agents_or_Propaganda_Engine-mono.pdf",
+      "dual_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-01/2511.23174_Safety_Agents_or_Propaganda_Engine-dual.pdf",
+      "log_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/logs/page-01.log",
+      "warning_reasons": [
+        "dangling_placeholder"
+      ],
+      "error_reasons": [],
+      "fallback_strategy": "translator_level_degraded_output"
+    },
+    "2": {
+      "page": 2,
+      "status": "pass",
+      "started_at": "2026-04-14T02:40:08.834663+00:00",
+      "finished_at": "2026-04-14T02:40:12.801147+00:00",
+      "duration_seconds": 3.966,
+      "exit_code": 0,
+      "mono_exists": true,
+      "dual_exists": true,
+      "mono_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-02/2511.23174_Safety_Agents_or_Propaganda_Engine-mono.pdf",
+      "dual_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-02/2511.23174_Safety_Agents_or_Propaganda_Engine-dual.pdf",
+      "log_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/logs/page-02.log",
+      "warning_reasons": [],
+      "error_reasons": [],
+      "fallback_strategy": null
+    },
+    "3": {
+      "page": 3,
+      "status": "degraded_pass",
+      "started_at": "2026-04-14T02:40:12.802002+00:00",
+      "finished_at": "2026-04-14T02:44:14.658760+00:00",
+      "duration_seconds": 241.857,
+      "exit_code": 0,
+      "mono_exists": true,
+      "dual_exists": true,
+      "mono_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-03/2511.23174_Safety_Agents_or_Propaganda_Engine-mono.pdf",
+      "dual_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-03/2511.23174_Safety_Agents_or_Propaganda_Engine-dual.pdf",
+      "log_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/logs/page-03.log",
+      "warning_reasons": [
+        "suspicious_english:tokens",
+        "suspicious_english:activation,red-teaming,steering"
+      ],
+      "error_reasons": [],
+      "fallback_strategy": "translator_level_degraded_output"
+    },
+    "4": {
+      "page": 4,
+      "status": "pass",
+      "started_at": "2026-04-14T02:44:14.659660+00:00",
+      "finished_at": "2026-04-14T02:46:18.527371+00:00",
+      "duration_seconds": 123.868,
+      "exit_code": 0,
+      "mono_exists": true,
+      "dual_exists": true,
+      "mono_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-04/2511.23174_Safety_Agents_or_Propaganda_Engine-mono.pdf",
+      "dual_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-04/2511.23174_Safety_Agents_or_Propaganda_Engine-dual.pdf",
+      "log_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/logs/page-04.log",
+      "warning_reasons": [],
+      "error_reasons": [],
+      "fallback_strategy": null
+    },
+    "5": {
+      "page": 5,
+      "status": "degraded_pass",
+      "started_at": "2026-04-14T02:46:18.528186+00:00",
+      "finished_at": "2026-04-14T02:49:25.831478+00:00",
+      "duration_seconds": 187.303,
+      "exit_code": 0,
+      "mono_exists": true,
+      "dual_exists": true,
+      "mono_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-05/2511.23174_Safety_Agents_or_Propaganda_Engine-mono.pdf",
+      "dual_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-05/2511.23174_Safety_Agents_or_Propaganda_Engine-dual.pdf",
+      "log_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/logs/page-05.log",
+      "warning_reasons": [
+        "suspicious_english:from,prompt,topics,tracted"
+      ],
+      "error_reasons": [],
+      "fallback_strategy": "translator_level_degraded_output"
+    },
+    "6": {
+      "page": 6,
+      "status": "pass",
+      "started_at": "2026-04-14T02:49:25.832571+00:00",
+      "finished_at": "2026-04-14T03:03:13.766986+00:00",
+      "duration_seconds": 827.934,
+      "exit_code": 0,
+      "mono_exists": true,
+      "dual_exists": true,
+      "mono_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-06/2511.23174_Safety_Agents_or_Propaganda_Engine-mono.pdf",
+      "dual_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-06/2511.23174_Safety_Agents_or_Propaganda_Engine-dual.pdf",
+      "log_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/logs/page-06.log",
+      "warning_reasons": [],
+      "error_reasons": [],
+      "fallback_strategy": null
+    },
+    "7": {
+      "page": 7,
+      "status": "degraded_pass",
+      "started_at": "2026-04-14T03:03:13.767926+00:00",
+      "finished_at": "2026-04-14T03:08:23.526757+00:00",
+      "duration_seconds": 309.759,
+      "exit_code": 0,
+      "mono_exists": true,
+      "dual_exists": true,
+      "mono_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-07/2511.23174_Safety_Agents_or_Propaganda_Engine-mono.pdf",
+      "dual_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-07/2511.23174_Safety_Agents_or_Propaganda_Engine-dual.pdf",
+      "log_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/logs/page-07.log",
+      "warning_reasons": [
+        "dangling_placeholder",
+        "dangling_placeholder",
+        "dangling_placeholder",
+        "dangling_placeholder"
+      ],
+      "error_reasons": [],
+      "fallback_strategy": "translator_level_degraded_output"
+    },
+    "8": {
+      "page": 8,
+      "status": "pass",
+      "started_at": "2026-04-14T03:08:23.527667+00:00",
+      "finished_at": "2026-04-14T03:11:11.102714+00:00",
+      "duration_seconds": 167.575,
+      "exit_code": 0,
+      "mono_exists": true,
+      "dual_exists": true,
+      "mono_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-08/2511.23174_Safety_Agents_or_Propaganda_Engine-mono.pdf",
+      "dual_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-08/2511.23174_Safety_Agents_or_Propaganda_Engine-dual.pdf",
+      "log_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/logs/page-08.log",
+      "warning_reasons": [],
+      "error_reasons": [],
+      "fallback_strategy": null
+    },
+    "9": {
+      "page": 9,
+      "status": "pass",
+      "started_at": "2026-04-14T03:11:11.103572+00:00",
+      "finished_at": "2026-04-14T03:14:44.085317+00:00",
+      "duration_seconds": 212.982,
+      "exit_code": 0,
+      "mono_exists": true,
+      "dual_exists": true,
+      "mono_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-09/2511.23174_Safety_Agents_or_Propaganda_Engine-mono.pdf",
+      "dual_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-09/2511.23174_Safety_Agents_or_Propaganda_Engine-dual.pdf",
+      "log_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/logs/page-09.log",
+      "warning_reasons": [],
+      "error_reasons": [],
+      "fallback_strategy": null
+    },
+    "10": {
+      "page": 10,
+      "status": "degraded_pass",
+      "started_at": "2026-04-14T03:14:44.086576+00:00",
+      "finished_at": "2026-04-14T03:23:28.231097+00:00",
+      "duration_seconds": 524.145,
+      "exit_code": 0,
+      "mono_exists": true,
+      "dual_exists": true,
+      "mono_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-10/2511.23174_Safety_Agents_or_Propaganda_Engine-mono.pdf",
+      "dual_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-10/2511.23174_Safety_Agents_or_Propaganda_Engine-dual.pdf",
+      "log_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/logs/page-10.log",
+      "warning_reasons": [
+        "placeholder_mismatch",
+        "suspicious_english:bench",
+        "placeholder_mismatch",
+        "dangling_placeholder",
+        "suspicious_english:ning",
+        "dangling_placeholder"
+      ],
+      "error_reasons": [],
+      "fallback_strategy": "translator_level_degraded_output"
+    },
+    "11": {
+      "page": 11,
+      "status": "degraded_pass",
+      "started_at": "2026-04-14T03:23:28.232090+00:00",
+      "finished_at": "2026-04-14T03:29:35.867177+00:00",
+      "duration_seconds": 367.635,
+      "exit_code": 0,
+      "mono_exists": true,
+      "dual_exists": true,
+      "mono_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-11/2511.23174_Safety_Agents_or_Propaganda_Engine-mono.pdf",
+      "dual_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-11/2511.23174_Safety_Agents_or_Propaganda_Engine-dual.pdf",
+      "log_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/logs/page-11.log",
+      "warning_reasons": [
+        "suspicious_english:experts",
+        "suspicious_english:sure",
+        "suspicious_english:chat,llama",
+        "suspicious_english:jing"
+      ],
+      "error_reasons": [],
+      "fallback_strategy": "translator_level_degraded_output"
+    },
+    "12": {
+      "page": 12,
+      "status": "degraded_pass",
+      "started_at": "2026-04-14T03:29:35.868058+00:00",
+      "finished_at": "2026-04-14T03:46:44.068190+00:00",
+      "duration_seconds": 1028.2,
+      "exit_code": 0,
+      "mono_exists": true,
+      "dual_exists": true,
+      "mono_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-12/2511.23174_Safety_Agents_or_Propaganda_Engine-mono.pdf",
+      "dual_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-12/2511.23174_Safety_Agents_or_Propaganda_Engine-dual.pdf",
+      "log_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/logs/page-12.log",
+      "warning_reasons": [
+        "suspicious_english:llama",
+        "suspicious_english:pages",
+        "suspicious_english:gpt-"
+      ],
+      "error_reasons": [],
+      "fallback_strategy": "translator_level_degraded_output"
+    },
+    "13": {
+      "page": 13,
+      "status": "degraded_pass",
+      "started_at": "2026-04-14T03:46:44.069229+00:00",
+      "finished_at": "2026-04-14T03:51:03.529749+00:00",
+      "duration_seconds": 259.461,
+      "exit_code": 0,
+      "mono_exists": true,
+      "dual_exists": true,
+      "mono_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-13/2511.23174_Safety_Agents_or_Propaganda_Engine-mono.pdf",
+      "dual_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-13/2511.23174_Safety_Agents_or_Propaganda_Engine-dual.pdf",
+      "log_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/logs/page-13.log",
+      "warning_reasons": [
+        "suspicious_english:safi"
+      ],
+      "error_reasons": [],
+      "fallback_strategy": "translator_level_degraded_output"
+    },
+    "14": {
+      "page": 14,
+      "status": "degraded_pass",
+      "started_at": "2026-04-14T03:51:03.530785+00:00",
+      "finished_at": "2026-04-14T04:40:05.900990+00:00",
+      "duration_seconds": 2942.37,
+      "exit_code": 0,
+      "mono_exists": true,
+      "dual_exists": true,
+      "mono_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-14/2511.23174_Safety_Agents_or_Propaganda_Engine-mono.pdf",
+      "dual_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-14/2511.23174_Safety_Agents_or_Propaganda_Engine-dual.pdf",
+      "log_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/logs/page-14.log",
+      "warning_reasons": [
+        "dangling_placeholder"
+      ],
+      "error_reasons": [],
+      "fallback_strategy": "translator_level_degraded_output"
+    },
+    "15": {
+      "page": 15,
+      "status": "pass",
+      "started_at": "2026-04-14T04:40:05.901961+00:00",
+      "finished_at": "2026-04-14T04:40:33.210501+00:00",
+      "duration_seconds": 27.309,
+      "exit_code": 0,
+      "mono_exists": true,
+      "dual_exists": true,
+      "mono_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-15/2511.23174_Safety_Agents_or_Propaganda_Engine-mono.pdf",
+      "dual_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/pages/page-15/2511.23174_Safety_Agents_or_Propaganda_Engine-dual.pdf",
+      "log_path": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/logs/page-15.log",
+      "warning_reasons": [],
+      "error_reasons": [],
+      "fallback_strategy": null
+    }
+  },
+  "merged_mono_pdf": "/Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/pdf2zh-2511-full-llamacpp/2511.23174_Safety_Agents_or_Propaganda_Engine-mono.pdf",
+  "completed_at": "2026-04-14T04:40:33.307380+00:00",
+  "summary": {
+    "page_status_counts": {
+      "pass": 6,
+      "degraded_pass": 9,
+      "failed_hard_source_passthrough": 0
+    },
+    "total_page_runtime_seconds": 7253.711
+  }
+}

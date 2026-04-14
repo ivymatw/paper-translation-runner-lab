@@ -1,0 +1,6 @@
+- 需要讀一些論文，但是大部分都是英文。英文能讀懂，但是中文讀起來速度比較快
+- 轉成文字檔(.md)後很容易翻譯，但是論文中的圖表方程式無法維持
+- 希望做一個轉換的程式，能夠輸入英文論文的pdf檔案，輸出一個中文論文的pdf檔案
+- 圖表能夠盡量維持，內容翻譯成繁體中文，專有名詞不翻譯沒關係，重點是讓閱讀加速
+- 論文多是LLM, AI相關領域
+- 測試論文 /Users/ivyma/obsidian/Max-Docs/llm-ccp-propaganda/papers/2511.23174_Safety_Agents_or_Propaganda_Engine.pdf
