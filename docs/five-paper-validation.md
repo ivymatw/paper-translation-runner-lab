@@ -40,21 +40,27 @@ Determine whether the completion-first runner can become a stable repeated workf
 
 ### Paper 4
 - pages: 30
-- result:
+- first full-run result:
   - pass: 29
   - degraded_pass: 1
   - failed_hard_source_passthrough: 0
 - isolated issue:
   - page 8 placeholder mismatch caused by role-adjacent placeholder behavior
+- follow-up status:
+  - edge case diagnosed and validator policy patched
+  - clean targeted rerun no longer triggered degraded fallback
 
 ### Paper 5
 - pages: 31
-- result:
+- first full-run result:
   - pass: 30
   - degraded_pass: 1
   - failed_hard_source_passthrough: 0
 - isolated issue:
   - page 16 placeholder mismatch caused by placeholder reordering under valid translation structure
+- follow-up status:
+  - edge case diagnosed and validator policy patched
+  - clean targeted rerun no longer triggered degraded fallback
 
 ## What the five-paper loop proved
 

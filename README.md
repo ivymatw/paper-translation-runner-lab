@@ -1,77 +1,92 @@
 # paper-translation-runner-lab
 
-A completion-first research repo for academic-paper translation and PDF reconstruction.
+Completion-first academic paper translation and PDF reconstruction.
 
-This repo captures two connected workstreams:
+This repo packages the system, docs, and validation artifacts behind a practical question:
 
-1. `local-paper-translation-lab/`
-   - the canonical markdown-oriented pipeline
-   - extraction -> normalization -> English repair -> glossary -> segmentation -> translation -> repair -> assembly
-   - intended for higher-quality study outputs
+Can a full academic paper finish end-to-end without manual babysitting, while leaving behind enough structure and logs to improve the system after each run?
 
-2. `run_pdf2zh_by_page.py`
-   - the completion-first PDF reconstruction runner
-   - page-level orchestration, resumable execution, degraded fallback, manifest/event/error logging
-   - intended for robust whole-document completion without manual babysitting
+Short answer: yes.
 
-## Why this repo exists
+## Current status
 
-The main engineering question was not just "can a paper be translated?"
+Operational beta.
 
-It was:
-- can a full academic paper finish end-to-end without stalling?
-- can failures degrade locally instead of killing the whole run?
-- can logs and manifests make the next repair cycle obvious?
-- can the workflow become stable enough for repeated multi-paper use?
+What is already true:
+- five-paper validation completed
+- zero hard-fail documents
+- zero source-page passthrough documents
+- later papers reached clean full-pass runs
+- the remaining problems are now mostly output-polish issues, not workflow blockers
 
-## What happened in this development cycle
-
-We ran a five-paper validation loop and patched the system based on real failure modes.
-
-High-level result:
-- 5 papers completed end-to-end
-- 0 hard-fail documents
-- 0 source-page passthrough documents
-- later papers reached near-clean or fully clean pass rates
-- remaining issues were narrowed from broad instability to a small number of placeholder/reference edge cases
+Validation headline:
+- Paper 1: 6 pass / 9 degraded / 0 hard fail
+- Paper 2: 19 pass / 0 degraded / 0 hard fail
+- Paper 3: 21 pass / 0 degraded / 0 hard fail
+- Paper 4: 29 pass / 1 degraded / 0 hard fail on first full run; remaining edge case diagnosed and patched
+- Paper 5: 30 pass / 1 degraded / 0 hard fail on first full run; remaining edge case diagnosed and patched
 
 See:
 - `docs/development-history.md`
 - `docs/five-paper-validation.md`
 - `docs/known-issues.md`
+- `CHANGELOG.md`
+- `ROADMAP.md`
 
-## Main components
+## What is in this repo
 
-Top-level runner:
+Two connected workstreams are preserved here.
+
+### 1. Canonical markdown-oriented pipeline
+Location:
+- `local-paper-translation-lab/`
+
+Purpose:
+- extract a cleaner English source from academic PDFs
+- repair source-side structure
+- segment and translate into Traditional Chinese markdown
+- assemble study-oriented outputs
+
+This is the path for higher-quality reading artifacts.
+
+### 2. Completion-first PDF reconstruction runner
+Entry points:
 - `run_pdf2zh_by_page.py`
 - `run_pdf2zh_by_page.sh`
 
-Canonical lab project:
-- `local-paper-translation-lab/src/`
-- `local-paper-translation-lab/tests/`
-- `local-paper-translation-lab/docs/`
+Purpose:
+- run page by page
+- resume safely
+- degrade locally instead of stalling globally
+- log what happened in machine-readable form
+- always produce a merged mono PDF if the document can be assembled
 
-Validation artifacts included here:
-- `validation/manifests/`
-- `validation/error-logs/`
+This is the path for robustness-first whole-document completion.
 
-## Design principles
+## Why this repo exists
+
+The problem is not just translation quality.
+
+The real systems problem is:
+- can one bad page stop a whole paper?
+- can failures be localized instead of becoming all-or-nothing?
+- can edge cases be diagnosed from manifests and logs rather than guesswork?
+- can repeated paper runs steadily improve the system?
+
+This repo exists to answer those questions with working code and validation artifacts.
+
+## Main design principles
 
 - completion first
 - local degradation over global stall
-- every degraded decision should be loggable
-- validate upstream boundaries before polishing downstream artifacts
+- explicit manifests and logs over hidden state
+- stage-gated thinking for upstream quality problems
 - cache-aware reruns when behavior changes materially
-
-## Current status
-
-This repo is now in an operational beta state:
-- usable for repeated multi-paper runs
-- still worth polishing on reference-heavy formatting and a few edge-case placeholder patterns
+- patch root causes, not just final artifacts
 
 ## Suggested entrypoints
 
-PDF reconstruction / completion-first path:
+### A. Completion-first PDF reconstruction
 
 ```bash
 ./run_pdf2zh_by_page.sh \
@@ -79,9 +94,79 @@ PDF reconstruction / completion-first path:
   --out /absolute/path/to/output-dir
 ```
 
-Canonical markdown-oriented path:
+Expected artifacts:
+- `run-manifest.json`
+- `run-events.jsonl`
+- `error-log.jsonl` when degraded pages exist
+- per-page outputs under `pages/page-XX/`
+- final merged mono PDF
+
+### B. Canonical markdown-oriented path
 
 ```bash
 cd local-paper-translation-lab
 python3 src/run_paper.py /absolute/path/to/paper.pdf --paper-id my-paper
 ```
+
+Expected artifacts include:
+- clean English source
+- glossary
+- segmented blocks
+- translated / repaired blocks
+- archival markdown
+- study markdown
+- visuals-enhanced study markdown
+
+## Repo layout
+
+```text
+paper-translation-runner-lab/
+├── README.md
+├── CHANGELOG.md
+├── ROADMAP.md
+├── docs/
+├── local-paper-translation-lab/
+├── papers/
+├── run_pdf2zh_by_page.py
+├── run_pdf2zh_by_page.sh
+├── tests/
+└── validation/
+```
+
+## Validation artifacts included here
+
+Included:
+- compact run manifests for the five full-document validation runs
+- degraded/error logs when present
+- the regression tests added during debugging
+- development notes and findings docs
+
+Deliberately excluded:
+- large generated PDF outputs
+- raw caches
+- heavyweight per-run work directories
+- source PDFs themselves
+
+## Key engineering findings from the validation loop
+
+The biggest gains did not come from one perfect prompt.
+They came from fixing failure families:
+- suspicious-English false positives on reference-heavy pages
+- placeholder formatting variants like `{ v0 }`
+- reference placeholders naturally expanded into full venue names
+- placeholder reordering under valid Chinese syntax
+- role-adjacent placeholder dropping during refusal outputs
+- cache confusion during reruns
+
+Once those were isolated and patched, later papers became dramatically cleaner.
+
+## Known remaining polish targets
+
+These are not workflow blockers anymore:
+- reference-heavy page formatting still mixes untranslated venue fragments in some outputs
+- shell wrapper exits can show non-fatal `HISTTIMEFORMAT` noise in background runs
+- runtime comparisons still require cache discipline to be meaningful
+
+## License
+
+MIT

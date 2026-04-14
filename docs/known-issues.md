@@ -4,6 +4,10 @@
 
 These are no longer workflow blockers, but still matter for output quality.
 
+Important status update:
+- the known five-paper validation placeholder blockers were diagnosed and patched
+- remaining work is now mostly output-polish work, not completion-stability work
+
 ### 1. Reference-heavy page formatting
 Common symptoms:
 - proceedings / association names partially left in English
