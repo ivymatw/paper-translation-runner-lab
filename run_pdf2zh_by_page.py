@@ -104,6 +104,10 @@ def run_page(args, page: int, out_root: Path, stem: str, events_path: Path, mani
     ]
 
     env = os.environ.copy()
+    pythonpath_entries = [str(args.workdir)]
+    if env.get("PYTHONPATH"):
+        pythonpath_entries.append(env["PYTHONPATH"])
+    env["PYTHONPATH"] = os.pathsep.join(pythonpath_entries)
     env["OPENAI_BASE_URL"] = args.openai_base_url
     env["OPENAI_API_KEY"] = args.openai_api_key
     env["OPENAI_MODEL"] = args.openai_model
